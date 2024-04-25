@@ -34,3 +34,12 @@
 .hide {
   display: none !important;
 }
+
+#message {
+  width: 40%;
+}
+
+.alert.alert-light p {
+  border-bottom: 2px solid #333;
+  padding: 1.2em 0;
+}
