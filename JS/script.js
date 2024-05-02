@@ -60,8 +60,6 @@ const getAddress = async (cep) => {
     return;
   }
 
-  
-
   // Activate disabled attribute if form is empty
 
   if (addressInput.value === "") {
@@ -75,6 +73,7 @@ const getAddress = async (cep) => {
   toggleLoader();
 };
 // Add or remove disable attribute
+
 const toggleDisabled = () => {
   if (regionInput.hasAttribute("disabled")) {
     formInputs.forEach((input) => {
@@ -86,29 +85,36 @@ const toggleDisabled = () => {
     });
   }
 };
+
 // Show or hide loader
+
 const toggleLoader = () => {
   const fadeElement = document.querySelector("#fade");
   const loaderElement = document.querySelector("#loader");
   fadeElement.classList.toggle("hide");
   loaderElement.classList.toggle("hide");
 };
+
 // Show or hide message
+
 const toggleMessage = (msg) => {
   const fadeElement = document.querySelector("#fade");
   const messageElement = document.querySelector("#message");
 
   const messageTextElement = document.querySelector("#message p");
 
-
   messageTextElement.innerText = msg;
 
   fadeElement.classList.toggle("hide");
   messageElement.classList.toggle("hide");
 };
+
 // Close message modal
+
 closeButton.addEventListener("click", () => toggleMessage());
+
 // Save address
+
 addressForm.addEventListener("submit", (e) => {
   e.preventDefault();
   toggleLoader();
