@@ -28,7 +28,7 @@ cepInput.addEventListener("keypress", (e) => {
 cepInput.addEventListener("keyup", (e) => {
   const inputValue = e.target.value;
 
-  //   Check if we have a CEP
+  // Check if we have a CEP
 
   if (inputValue.length === 8) {
     getAddress(inputValue);
