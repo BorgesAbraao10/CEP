@@ -72,6 +72,7 @@ const getAddress = async (cep) => {
   regionInput.value = data.uf;
   toggleLoader();
 };
+
 // Add or remove disable attribute
 
 const toggleDisabled = () => {
